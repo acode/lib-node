@@ -1,0 +1,23 @@
+{
+  "name": "lib",
+  "version": "2.0.0-dev",
+  "description": "Standard Library for Microservices",
+  "main": "index.js",
+  "engines": {
+    "node" : ">=4.0.0"
+  },
+  "keywords": [
+    "lib",
+    "serverless",
+    "microservice",
+    "stdlib",
+    "stdlib.com",
+    "node"
+  ],
+  "author": "Keith Horwood",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib/lib.git"
+  },
+  "license": "MIT"
+}
