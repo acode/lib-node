@@ -96,7 +96,7 @@ const lib = (function() {
       },
       {
         get: (target, name) => {
-          name = names.length === 2 && name[0] !== '@' ? ['@latest', name] : [name];
+          name = names.length === 2 && name[0] !== '@' ? ['@release', name] : [name];
           return LibGen(names.concat(name));
         }
       }
