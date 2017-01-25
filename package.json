@@ -1,6 +1,6 @@
 {
-  "name": "lib",
-  "version": "2.0.0-dev",
+  "name": "lib-node",
+  "version": "0.0.0",
   "description": "Standard Library for Microservices",
   "main": "index.js",
   "engines": {
