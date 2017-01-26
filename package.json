@@ -17,7 +17,7 @@
   "author": "Keith Horwood",
   "repository": {
     "type": "git",
-    "url": "git://github.com/stdlib/lib.git"
+    "url": "git://github.com/stdlib/lib-node.git"
   },
   "license": "MIT"
 }
