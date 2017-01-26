@@ -2,7 +2,7 @@
   "name": "lib-node",
   "version": "0.0.0",
   "description": "Standard Library for Microservices",
-  "main": "index.js",
+  "main": "lib.js",
   "engines": {
     "node" : ">=4.0.0"
   },
