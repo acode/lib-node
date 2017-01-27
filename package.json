@@ -1,7 +1,7 @@
 {
   "name": "lib",
   "version": "2.0.0",
-  "description": "Standard Library for Microservices",
+  "description": "StdLib: Standard Library for Microservices Node.js Bindings",
   "main": "lib.js",
   "engines": {
     "node" : ">=4.0.0"
@@ -12,7 +12,9 @@
     "microservice",
     "stdlib",
     "stdlib.com",
-    "node"
+    "node",
+    "standard",
+    "library"
   ],
   "author": "Keith Horwood",
   "repository": {

@@ -2,6 +2,9 @@
 
 Basic Node bindings for StdLib service accession (Node 4+).
 
+Used to interface with services built using [StdLib](https://stdlib.com) and
+the [StdLib Command Line Tools](https://github.com/stdlib/lib).
+
 The `lib` package is available on [npm: lib](https://npmjs.org/package/lib) and
 operates as zero-dependency interface to run StdLib functions. This means that
 you can utilize any service on StdLib without installing any additional
