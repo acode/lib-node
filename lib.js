@@ -16,9 +16,9 @@ module.exports = (function() {
         let isLocal = !names[0];
 
         if (isLocal) {
-          executeLocal(cfg, names, p.args, p.kwargs, p.content, p.body, p.callback);
+          executeLocal(cfg, names, p.args, p.kwargs, p.body, p.callback);
         } else {
-          executeRemote(cfg, names, p.args, p.kwargs, p.content, p.body, p.callback);
+          executeRemote(cfg, names, p.args, p.kwargs, p.body, p.callback);
         }
 
       },

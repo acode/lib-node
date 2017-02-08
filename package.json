@@ -1,6 +1,6 @@
 {
   "name": "lib",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "StdLib: Standard Library for Microservices Node.js Bindings",
   "main": "lib.js",
   "engines": {
