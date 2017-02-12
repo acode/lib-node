@@ -1,5 +1,10 @@
 # StdLib Node.js Bindings
 
+**Node** |
+[Python](https://github.com/stdlib/lib-python) |
+[Ruby](https://github.com/stdlib/lib-ruby) |
+[Web](https://github.com/stdlib/lib-js)
+
 Basic Node bindings for StdLib service accession (Node 4+).
 
 Used to interface with services built using [StdLib](https://stdlib.com) and
