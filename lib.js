@@ -12,16 +12,16 @@ module.exports = (function() {
       function __call__() {
 
         let args = [].slice.call(arguments);
+        let isLocal = !names[0];
 
         if (names.length === 0) {
           cfg = (typeof args[0] === 'object' ? args[0] : null) || {};
           return LibGen(cfg, names);
-        } else if (names.length === 1) {
+        } else if (names.length === 1 && !isLocal) {
           cfg.keys = (typeof args[0] === 'object' ? args[0] : null) || {};
           return LibGen(cfg, names);
         } else {
           let p = parseParameters(args);
-          let isLocal = !names[0];
           if (isLocal) {
             executeLocal(cfg, names, p.args, p.kwargs, p.body, p.callback);
           } else {
