@@ -12,13 +12,21 @@ module.exports = (function() {
       function __call__() {
 
         let args = [].slice.call(arguments);
-        let p = parseParameters(args);
-        let isLocal = !names[0];
 
-        if (isLocal) {
-          executeLocal(cfg, names, p.args, p.kwargs, p.body, p.callback);
+        if (names.length === 0) {
+          cfg = (typeof args[0] === 'object' ? args[0] : null) || {};
+          return LibGen(cfg, names);
+        } else if (names.length === 1) {
+          cfg.keys = (typeof args[0] === 'object' ? args[0] : null) || {};
+          return LibGen(cfg, names);
         } else {
-          executeRemote(cfg, names, p.args, p.kwargs, p.body, p.callback);
+          let p = parseParameters(args);
+          let isLocal = !names[0];
+          if (isLocal) {
+            executeLocal(cfg, names, p.args, p.kwargs, p.body, p.callback);
+          } else {
+            executeRemote(cfg, names, p.args, p.kwargs, p.body, p.callback);
+          }
         }
 
       },
