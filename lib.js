@@ -23,9 +23,9 @@ module.exports = (function() {
         } else {
           let p = parseParameters(args);
           if (isLocal) {
-            executeLocal(cfg, names, p.args, p.kwargs, p.body, p.callback);
+            return executeLocal(cfg, names, p.args, p.kwargs, p.body, p.callback);
           } else {
-            executeRemote(cfg, names, p.args, p.kwargs, p.body, p.callback);
+            return executeRemote(cfg, names, p.args, p.kwargs, p.body, p.callback);
           }
         }
 
