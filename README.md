@@ -26,6 +26,19 @@ lib.yourUsername.hostStatus({name: 'Dolores Abernathy'}, (err, result) => {
 });
 ```
 
+Or, using the Promise API:
+
+```javascript
+const lib = require('lib');
+lib.yourUsername.hostStatus({name: 'Dolores Abernathy'})
+  .then((result) => {
+    // handle result
+  })
+  .catch((err) => {
+    // handle errors
+  });
+```
+
 To discover StdLib services, visit https://stdlib.com/search. To build a service,
 get started with [the StdLib CLI tools](https://github.com/stdlib/lib).
 
