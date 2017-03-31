@@ -22,10 +22,12 @@ module.exports = (function() {
           return LibGen(cfg, names);
         } else {
           let p = parseParameters(args);
-          if (isLocal) {
-            executeLocal(cfg, names, p.args, p.kwargs, p.body, p.callback);
+          let func = isLocal ? executeLocal : executeRemote;
+          let execute = func.bind(null, cfg, names, p.args, p.kwargs, p.body);
+          if (p.callback) {
+            return execute(p.callback);
           } else {
-            executeRemote(cfg, names, p.args, p.kwargs, p.body, p.callback);
+            return new Promise((resolve, reject) => execute((err, result) => err ? reject(err) : resolve(result)));
           }
         }
 

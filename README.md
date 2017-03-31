@@ -11,11 +11,15 @@ Basic Node bindings for StdLib service accession (Node 4+).
 Used to interface with services built using [StdLib](https://stdlib.com) and
 the [StdLib Command Line Tools](https://github.com/stdlib/lib).
 
+**NEW:** Promise support (for future async / await) added in `2.2.0`.
+
 The `lib` package is available on [npm: lib](https://npmjs.org/package/lib) and
 operates as zero-dependency interface to run StdLib functions. This means that
 you can utilize any service on StdLib without installing any additional
 dependencies, and when you've deployed services to StdLib, you have a pre-built
 Node.js SDK --- for example;
+
+### Callback Style
 
 ```javascript
 const lib = require('lib');
@@ -24,6 +28,15 @@ lib.yourUsername.hostStatus({name: 'Dolores Abernathy'}, (err, result) => {
   // handle result
 
 });
+```
+
+### Promise Style
+
+```javascript
+const lib = require('lib');
+lib.yourUsername.hostStatus({name: 'Dolores Abernathy'})
+  .then(result => /* handle result */)
+  .catch(err => /* handle error */);
 ```
 
 To discover StdLib services, visit https://stdlib.com/search. To build a service,
