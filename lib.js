@@ -18,9 +18,9 @@ module.exports = (function() {
         } else if (names.length === 1 && !isLocal) {
           return LibGen(rootCfg, {keys: (typeof args[0] === 'object' ? args[0] : {})}, names);
         } else {
-          let p = parseParameters(args);
+          let p = parseParameters(names, args);
           let func = isLocal ? executeLocal : executeRemote;
-          let execute = func.bind(null, cfg, names, p.args, p.kwargs, p.body);
+          let execute = func.bind(null, cfg, names, p.params);
           if (p.callback) {
             return execute(p.callback);
           } else {
