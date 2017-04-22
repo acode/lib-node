@@ -84,21 +84,6 @@ lib['stdlib.reflect[@release].main'](0, 1, {kwarg: 'value'}, (err, result) => {}
 lib['stdlib.reflect[@0.0.1].main'](0, 1, {kwarg: 'value'}, (err, result) => {});
 ```
 
-### Local Usage
-
-To use StdLib services locally (from within a StdLib function), use the
-"string composition" method and begin your service path with a period;
-
-```javascript
-lib['.otherFunction']({key: 'X'}, (err, result) => {});
-```
-
-This functionality exists, so if needs be, you can directly interface with
-other functions within a StdLib service when testing locally (i.e. MapReduce
-  usage). Please note that **local functions always execute in the same context
-  and thread as the caller**, meaning you *will not* get the scalability benefits
-  of calling the function remotely, however **latency is significantly reduced**.
-
 ## Additional Information
 
 To learn more about StdLib, visit [stdlib.com](https://stdlib.com) or read the
