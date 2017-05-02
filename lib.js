@@ -2,7 +2,6 @@ const appendLibPath = require('./lib/append.js');
 const parseParameters = require('./lib/parse.js');
 const executeLocal = require('./lib/local.js');
 const executeRemote = require('./lib/remote.js');
-const flags = require('./lib/flags.js');
 
 module.exports = (function() {
 
@@ -31,17 +30,7 @@ module.exports = (function() {
       },
       {
         get: (target, name) => {
-          if (name[0] === '_') {
-            let flag = flags[name.substr(1)];
-            if (!flag) {
-              throw new Error(`Invalid flag: "${name.substr(1)}". Valid flags: ${Object.keys(flags).join(', ')}.`);
-            }
-            return function __flag__() {
-              return LibGen(rootCfg, flag(...arguments), names);
-            };
-          } else {
-            return LibGen(rootCfg, {}, appendLibPath(names, name));
-          }
+          return LibGen(rootCfg, {}, appendLibPath(names, name));
         }
       }
     );
