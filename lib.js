@@ -26,7 +26,6 @@ module.exports = (function() {
             return new Promise((resolve, reject) => execute((err, result) => err ? reject(err) : resolve(result)));
           }
         }
-
       },
       {
         get: (target, name) => {
