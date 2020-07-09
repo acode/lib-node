@@ -7,7 +7,6 @@ module.exports = (function() {
 
   let LibGen = (rootCfg, cfg, names) => {
     rootCfg = Object.assign(cfg || {}, rootCfg || {});
-    rootCfg.maxRedirects = 1;
     names = names || [];
     return new Proxy(
       function __call__() {
