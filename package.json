@@ -1,7 +1,7 @@
 {
   "name": "lib",
   "version": "4.3.1",
-  "description": "StdLib: Standard Library for Microservices Node.js Bindings",
+  "description": "Autocode standard library Node.js bindings",
   "main": "lib.js",
   "engines": {
     "node": ">=4.0.0"
