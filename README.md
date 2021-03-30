@@ -1,15 +1,15 @@
 # Autocode standard library Node.js bindings
 
-[Autocode CLI setup](https://github.com/stdlib/lib) |
+[Autocode CLI setup](https://github.com/acode/lib) |
 **Node** |
-[Python](https://github.com/stdlib/lib-python) |
-[Ruby](https://github.com/stdlib/lib-ruby) |
-[Web](https://github.com/stdlib/lib-js)
+[Python](https://github.com/acode/lib-python) |
+[Ruby](https://github.com/acode/lib-ruby) |
+[Web](https://github.com/acode/lib-js)
 
 Basic Node bindings for Autocode standard library service accession (Node 4+).
 
 Used to interface with services built using [Autocode](https://autocode.com) and
-the [Autocode Command Line Tools](https://github.com/stdlib/lib).
+the [Autocode CLI](https://github.com/acode/lib).
 
 The `lib` package is available on [npm: lib](https://npmjs.org/package/lib) and
 operates as zero-dependency interface to run Autocode standard library APIs and
@@ -84,7 +84,7 @@ await lib['utils.greet[@0.0.1].otherEndpoint']({name: 'Lionel Hutz'});
 ## Additional Information
 
 To learn more about Autocode, visit [autocode.com](https://autocode.com) or read the
-[Autocode CLI documentation on GitHub](https://github.com/stdlib/lib).
+[Autocode CLI documentation on GitHub](https://github.com/acode/lib).
 
 You can follow the development team on Twitter, [@AutocodeHQ](https://twitter.com/AutocodeHQ)
 
