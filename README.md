@@ -1,11 +1,5 @@
 # Autocode standard library Node.js bindings
 
-[Autocode CLI setup](https://github.com/acode/lib) |
-**Node** |
-[Python](https://github.com/acode/lib-python) |
-[Ruby](https://github.com/acode/lib-ruby) |
-[Web](https://github.com/acode/lib-js)
-
 Basic Node bindings for Autocode standard library service accession (Node 4+).
 
 Used to interface with services built using [Autocode](https://autocode.com) and
