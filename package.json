@@ -1,6 +1,6 @@
 {
   "name": "lib",
-  "version": "4.3.3",
+  "version": "5.0.0",
   "description": "Autocode standard library Node.js bindings",
   "main": "lib.js",
   "engines": {
